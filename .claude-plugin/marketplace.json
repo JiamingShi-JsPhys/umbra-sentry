@@ -1,0 +1,16 @@
+{
+  "$schema": "https://www.schemastore.org/claude-code-marketplace.json",
+  "name": "umbra-sentry-marketplace",
+  "description": "Marketplace for the umbra-sentry hardening plugin.",
+  "owner": {
+    "name": "JiamingShi-JsPhys"
+  },
+  "plugins": [
+    {
+      "name": "umbra-sentry",
+      "source": "./",
+      "version": "1.0.0",
+      "description": "Semantic-layer defense pipeline that hardens release artifacts against AI reverse-engineering agents."
+    }
+  ]
+}

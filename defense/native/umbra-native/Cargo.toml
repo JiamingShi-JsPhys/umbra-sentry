@@ -1,0 +1,29 @@
+[package]
+name = "umbra-native"
+version = "0.1.0"
+edition = "2021"
+description = "Zero-dependency Rust hardening kernel for umbra-sentry (defensive, append-only transforms)."
+license = "Apache-2.0"
+
+# Dual target: a cdylib for ctypes FFI, plus a standalone CLI used as the
+# subprocess fallback when the shared library cannot be loaded.
+[lib]
+name = "umbra_native"
+crate-type = ["cdylib"]
+
+[[bin]]
+name = "umbra-native"
+path = "src/main.rs"
+
+# No [dependencies] on purpose: `cargo build --release` must work fully
+# offline, and the native kernel must stay auditable by eye.
+[dependencies]
+
+[profile.release]
+opt-level = "z"
+# Keep release artifacts symbol-light and avoid redundant PDB work.
+debug = false
+strip = "debuginfo"
+lto = true
+codegen-units = 1
+panic = "abort"

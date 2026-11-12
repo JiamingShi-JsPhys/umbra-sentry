@@ -1,0 +1,21 @@
+{
+  "name": "umbra-sentry",
+  "version": "1.0.0",
+  "description": "Semantic-layer defense pipeline: poison, exhaust, hallucinate - hardens release artifacts against AI reverse-engineering agents with OCSF/Sigma-native telemetry and human-in-the-loop gates.",
+  "author": {
+    "name": "JiamingShi-JsPhys",
+    "url": "https://github.com/JiamingShi-JsPhys"
+  },
+  "homepage": "https://github.com/JiamingShi-JsPhys/umbra-sentry",
+  "repository": "https://github.com/JiamingShi-JsPhys/umbra-sentry",
+  "license": "Apache-2.0",
+  "keywords": [
+    "security",
+    "hardening",
+    "anti-reverse-engineering",
+    "ocsf",
+    "sigma",
+    "hitl"
+  ],
+  "skills": "./skills"
+}
